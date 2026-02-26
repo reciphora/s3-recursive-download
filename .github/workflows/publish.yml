@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Debug: npm identity, package dry-run and README snippet (temporary)
+      - name: npm identity, package dry-run and README snippet (temporary)
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
