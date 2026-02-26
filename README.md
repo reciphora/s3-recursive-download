@@ -9,7 +9,7 @@ Key features
 
 Install
 
-You can run this from a local checkout or via npx after the package is published to npm.
+You can run this from a local checkout.
 
 Local
 
@@ -52,8 +52,3 @@ Please open issues and PRs. See `CONTRIBUTING.md` for guidelines (coming soon).
 License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
-
-Notes
-
-- Before publishing, update the `package.json` fields: `author`, `repository`, and the npx usage to match your npm/org name.
-- CI workflows and tests will be added to run on PRs and publish releases.

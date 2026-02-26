@@ -31,6 +31,22 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
+      - name: Debug: npm identity, package dry-run and README snippet (temporary)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          echo "== npm whoami =="
+          npm whoami || true
+          echo "== npm pack (dry-run) =="
+          npm pack --dry-run --json || true
+          echo "== npm publish (dry-run) =="
+          npm publish --dry-run --access public --json || true
+          echo "== package.json =="
+          cat package.json
+          echo "== README head (first 200 lines) =="
+          head -n 200 README.md || true
+
       - name: Publish package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
