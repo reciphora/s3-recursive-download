@@ -21,7 +21,7 @@ node s3-download-directory-recursively.js --bucket my-bucket --prefix some/path/
 npx
 
 ```bash
-npx <your-username>/s3-recursive-download --bucket my-bucket --prefix some/path/ --dest ./local-dir --region us-east-1
+npx @reciphora/s3-recursive-download --bucket my-bucket --prefix some/path/ --dest ./local-dir --region us-east-1
 ```
 
 Usage
