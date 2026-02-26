@@ -1,7 +1,7 @@
 {
   "name": "@reciphora/s3-recursive-download",
-  "version": "1.0.1",
-  "description": "Recursively download all objects from an S3 prefix into a local directory preserving folder structure.",
+  "version": "1.0.3",
+  "description": "CLI to recursively download S3 objects into a local directory.",
   "main": "s3-download-directory-recursively.js",
   "bin": {
     "s3-recursive-download": "s3-download-directory-recursively.js"
