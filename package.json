@@ -1,0 +1,43 @@
+{
+  "name": "s3-recursive-download",
+  "version": "1.0.0",
+  "description": "Recursively download all objects from an S3 prefix into a local directory preserving folder structure.",
+  "main": "s3-download-directory-recursively.js",
+  "bin": {
+    "s3-recursive-download": "s3-download-directory-recursively.js"
+  },
+  "scripts": {
+    "test": "jest --runInBand",
+    "start": "node s3-download-directory-recursively.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "aws",
+    "s3",
+    "download",
+    "recursive",
+    "cli"
+  ],
+  "author": "Karthick N karthickvalentino@gmail.com",
+  "license": "MIT",
+  "files": [
+    "s3-download-directory-recursively.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.998.0",
+    "@aws-sdk/credential-providers": "^3.998.0"
+  }
+  ,
+  "devDependencies": {
+    "aws-sdk-client-mock": "^2.1.0",
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
